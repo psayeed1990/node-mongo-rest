@@ -27,6 +27,9 @@ app.use(express.json());
 //routes
 const userRoutes = require("./routes/userRoutes");
 
+//use routes
+app.use("/api/users", userRoutes);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
