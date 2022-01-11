@@ -11,12 +11,7 @@ app.use(cors());
 
 //connect mongoose
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-});
+mongoose.connect(process.env.MONGO_URL);
 
 //urlencoded
 app.use(express.urlencoded({ extended: true }));
